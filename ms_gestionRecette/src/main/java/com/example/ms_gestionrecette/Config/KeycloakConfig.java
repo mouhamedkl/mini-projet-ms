@@ -7,8 +7,10 @@ import org.keycloak.admin.client.Keycloak;
 import org.keycloak.admin.client.KeycloakBuilder;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 
 @Configuration
+@EnableWebSecurity
 public class KeycloakConfig {
 
 
@@ -17,13 +19,14 @@ public class KeycloakConfig {
         return new KeycloakSpringBootConfigResolver();
     }
 
+
     static Keycloak keycloak=null;
-    final static String serverUrl = "http://localhost:8080/auth";
+    final static String serverUrl = "http://localhost:8180/auth";
     public final static String realm = "JobBoardKeycloack";
     public final static String clientId = "recette-service";
-    final static String clientSecret = "c0a3cbe2-c7ef-4ef9-8644-45f6b652f6ce";
-    final static String userName = "nadhir";
-    final static String password = "nadhir";
+    final static String clientSecret = "1296385d-e15c-4333-8d4a-b88c824d70ab";
+    final static String userName = "admin";
+    final static String password = "admin";
 
     public KeycloakConfig() {
     }

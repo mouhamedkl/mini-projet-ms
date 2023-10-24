@@ -35,20 +35,20 @@ public class keycloakSecurityConfig extends KeycloakWebSecurityConfigurerAdapter
 
     }
     @Override
-    protected void configure(HttpSecurity http) throws Exception{
+    public void configure(HttpSecurity http) throws Exception{
         super.configure(http);
         http.csrf()
                 .disable()
                 .httpBasic()
                 .disable()
                 .authorizeRequests()
-                .antMatchers("/ms/*").hasAuthority("user")
+                .antMatchers("/*").hasAuthority("user")
                 .and()
                 .authorizeRequests()
-                .antMatchers("/ms/recette/add/*").hasAuthority("user")
+                .antMatchers("/recette/add/*").hasAuthority("user")
                 .and()
                 .authorizeRequests()
-                .antMatchers("/ms/recette/delete/**").hasAuthority("admin")
+                .antMatchers("/recette/delete/**").hasAuthority("admin")
                 .anyRequest()
                 .authenticated();
     }

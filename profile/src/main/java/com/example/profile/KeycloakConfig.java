@@ -20,12 +20,12 @@ public class KeycloakConfig {
     }
 
     static Keycloak keycloak=null;
-     final static String serverUrl = "http://localhost:8080/auth";
+     final static String serverUrl = "http://localhost:8180/auth";
     public final static String realm = "JobBoardKeycloack";
     public final static String clientId = "profile-service";
-     final static String clientSecret = "7ae92c47-2ed5-4c1a-ae70-0ddb34d09977";
-    final static String userName = "nadhir";
-    final static String password = "nadhir";
+     final static String clientSecret = "9abce578-bbcb-4b9b-b48d-190353533fbc";
+    final static String userName = "profile1";
+    final static String password = "root";
 
     public KeycloakConfig() {
     }
